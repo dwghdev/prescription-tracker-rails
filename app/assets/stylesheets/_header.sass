@@ -1,0 +1,71 @@
+@import "variables"
+
+.header
+  .header-logo
+    a 
+      font-size: 26px
+      font-weight: 700
+      color: $black_70
+      text-transform: uppercase
+      img 
+        width: 20%
+    span 
+      color: $main_color
+
+  .header-backdrop,
+  .header-close-btn,
+  .header-hamburger-btn 
+    display: none
+
+  .menu-item
+    margin-left: 40px
+    position: relative
+    display: inline-block
+
+    &:hover 
+      > a 
+        color: $main_color
+
+      @media(min-width: 992px)
+        > .sub-menu
+          opacity: 1
+          visibility: visible
+          transform: translateY(0)
+
+    > a
+      display: block
+      padding: 24px 0
+      font-weight: 400
+      color: $black_90
+      text-transform: capitalize
+      transform: color 0.3s ease
+      i 
+        font-size: 13px
+        margin-left: 3px
+        pointer-events: none
+
+    .sub-menu
+      left: 0
+      top: 100%
+      opacity: 0
+      z-index: 2
+      width: 210px
+      padding: 10px 0
+      background: white
+      position: absolute
+      border-radius: 5px
+      visibility: hidden
+      box-shadow: $shadow
+      transition: all 0.3 ease
+      transform: translateY(10px)
+
+      .sub-menu-item
+        a
+          display: block 
+          color: $black_90
+          font-weight: 400
+          padding: 10px 20px
+          text-transform: capitalize
+          transform: color 0.3s ease
+          &:hover
+            color: $main_color

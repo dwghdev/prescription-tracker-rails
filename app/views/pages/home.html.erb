@@ -1,0 +1,46 @@
+<%= render "layouts/header" %>
+<%= render "hero" %>
+
+<section class="stat-section">
+  <div class="container">
+    <h2 class="title text-center">
+      Statistics
+      <div class="box py-2">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="stat-item">
+              <h2 class="style-1">
+                <%= Doctor.count %>
+              </h2>
+              <p> Doctors </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="stat-item">
+              <h2 class="style-2">
+                <%= Medicine.count %>
+              </h2>
+              <p>Total Medicines</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="stat-item">
+              <h2 class="style-3">
+                <%= Prescription.count %>
+              </h2>
+              <p>Prescriptions</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="stat-item">
+              <h2 class="style-4">
+                  0
+                </h2>
+              <p>Average</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+          

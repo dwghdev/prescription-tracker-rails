@@ -1,0 +1,64 @@
+<header class="header">
+  <div class="container">
+    <div class="header-main d-flex justify-content-between align-items-center">
+      <div class="header-logo">
+        <%= link_to root_path do %>
+          <%= image_tag "logo.png" %>
+        <% end %>
+      </div>
+
+      <button class="header-hamburger-btn js-header-menu-toggler">
+        <span></span>
+      </button>
+
+      <div class="header-backdrop js-header-backdrop">
+      </div>
+
+      <nav class="header-menu js-header-menu">
+        <button class="header-close-btn js-header-menu-toggler">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <ul class="menu">
+          <li class="menu-item">
+            <%= link_to "Home", root_path %>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <%= link_to doctors_path, class: "js-toggle-sub-menu" do %>
+              | Doctors
+              <i class="fas fa-chevron-down"></i>
+            <% end %>
+            <ul class="sub-menu js-sub-menu">
+              <li class="sub-menu-item">
+                <%= link_to "Register", new_doctor_path %>
+              </li>
+              <li class="sub-menu-item">
+                <%= link_to "Prescriptions", all_prescriptions_path %>
+              </li>
+              <li class="sub-menu-item">
+                <%= link_to "Specializations", specializations_path %>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <%= link_to "Medicines", medicines_path %>
+          </li>
+          <li class="menu-item">
+            <%= link_to root_path, class: "js-toggle-sub-menu" do %>
+              | News
+              <i class="fas fa-chevron-down"></i>
+            <% end %>
+            <ul class="sub-menu js-sub-menu">
+              <li class="sub-menu-item">
+                <%= link_to "COVID 19", root_path %>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <%= link_to "Contact", root_path %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
