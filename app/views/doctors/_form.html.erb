@@ -57,12 +57,15 @@
     %>
     <!-- Specializations -->
     <div class="form-group">
-      <%= f.collection_select :specialization_id, 
-          specializations, 
-          :id, :name, { 
-            prompt: "Select Specialization"
-          }, { class: "form-control" }
+      <%= f.collection_select :specialization_id,
+          specializations, :id, :name,
+          { prompt: "Select Specialization" },
+          { class: "form-control" }
       %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit value: button_label, class: "btn-register" %>
     </div>
   </div>
 <% end %>

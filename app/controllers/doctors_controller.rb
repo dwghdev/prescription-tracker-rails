@@ -1,5 +1,7 @@
 class DoctorsController < ApplicationController
   before_action :set_doctors, only: :index
+  before_action :set_doctor, only: %i[show edit]
+  before_action :set_specializations, only: %i[new edit]
   
   def index; end
   def show; end
@@ -13,7 +15,7 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.new(doctor_params)
     if @doctor.save
       redirect_to @doctor
-    else
+    else 
       render :new
     end
   end

@@ -1,0 +1,14 @@
+<%- paths = [doctors_path] %>
+
+<%= render "layouts/header" %>
+<%= render "layouts/breadcrumb", paths: paths %>
+
+<div class="box mt-5">
+  <h2><%= @doctor.fullname %></h2>
+  <p><%= @doctor.age %></p>
+  <p><%= @doctor.gender %></p>
+  <p><%= @doctor.phone_no %></p>
+  <p><%= @doctor.email %></p>
+  <p><%= @doctor.license_no %></p>
+  <p><%= @doctor.specialization.name %></p>
+</div>
