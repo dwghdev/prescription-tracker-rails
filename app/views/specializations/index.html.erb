@@ -1,8 +1,8 @@
-<% path = specializations_path %>
+<% paths = [specializations_path] %>
 
 <%= render "layouts/header" %>
-<%= render "layouts/breadcrumb", path: path %>
-<%= render "layouts/searchbar", path: path, placeholder: "Search" %>
+<%= render "layouts/breadcrumb", paths: paths %>
+<%= render "layouts/searchbar", paths: paths, placeholder: "Search" %>
 
 <h3 class="text-center mt-5">Specializations</h3>
 <%= render "specializations" %>

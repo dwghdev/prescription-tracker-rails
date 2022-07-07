@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 2022_07_05_141809) do
   enable_extension "plpgsql"
 
   create_table "doctors", force: :cascade do |t|
-    t.string "firstname"
-    t.string "lastname"
+    t.string "firstname", null: false
+    t.string "lastname", null: false
     t.integer "age"
-    t.string "gender"
+    t.string "gender", null: false
     t.string "phone_no"
     t.string "email"
-    t.string "license_no"
+    t.string "license_no", null: false
     t.bigint "specialization_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(version: 2022_07_05_141809) do
   end
 
   create_table "specializations", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.string "name", null: false
+    t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
