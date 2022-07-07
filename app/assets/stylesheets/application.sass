@@ -39,7 +39,7 @@ img
 ul
   margin: 0
   padding: 0
-    list-style: none
+  list-style: none
 
 h1, h2, h3, h4, h5, h6
   color: $black_90
@@ -55,3 +55,67 @@ h1, h2, h3, h4, h5, h6
 
 .row
   --bs-gutter-x: 30px
+
+.box
+  padding: 30px
+  background: $white
+  border-radius: 5px
+  box-shadow: $shadow
+
+.title
+  font-size: 20px
+  color: $main_color
+  text-transform: capitalize
+
+#error_explanation
+  li 
+    color: black
+
+.btn-theme
+  font-size: 16px
+  background: none
+  font-weight: 500
+  padding: 8px 20px
+  transition: all 0.3s ease
+  text-transform: capitalize
+  outline: 2px solid $main_color
+
+  &:hover 
+    color: white
+    outline: none
+    background: $main_color
+  &:focus
+    box-shadow: 0 0 8px $main_color
+
+.hero-section
+  padding: 80px 0
+  min-height: 680px
+  .hero-text
+    h2
+      font-size: 20px
+      color: $main_color
+    h1
+      font-size: 45px
+      font-weight: 700
+  .hero-img
+    margin: auto
+    max-width: 430px
+    position: relative
+    img 
+      z-index: 1
+      position: relative
+
+.doctor-details
+  .doctor-header
+    h2
+      font-size: 30px
+      margin: 0 0 15px
+      font-weight: 600
+    .rating
+      .average-rating
+        color: $orange
+        font-weight: 600
+
+.specializations
+  padding: 30px
+  margin-top: 8px

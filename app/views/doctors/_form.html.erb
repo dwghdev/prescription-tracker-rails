@@ -1,0 +1,68 @@
+<%= form_with model: @doctor, class: "row register-form" do |f| %>
+  <% if @doctor.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @doctor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- RIGHT INPUTS -->
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= 
+        f.text_field :firstname, 
+        class: "form-control",
+        placeholder: "First Name" 
+      %>
+      <%= 
+        f.text_field :lastname, 
+        class: "form-control",
+        placeholder: "Last Name" 
+      %>
+      <%= 
+        f.text_field :age, 
+        class: "form-control",
+        placeholder: "Age (Optional)" 
+      %>
+    </div>
+    <div class="form-group">
+      <label class="radio inline">
+        <%= f.radio_button :gender, "male" %>
+        <span>Male</span>
+      </label>
+      <label class="radio inline">
+        <%= f.radio_button :gender, "female" %>
+        <span>Female</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- LEFT INPUTS -->
+  <div class="col-md-6">
+    <%= f.text_field :phone_no,
+        placeholder: "Phone no (Optional)",
+        class: "form-control",
+        minlength: "11", maxlength: "11"
+    %>
+    <%= f.text_field :email,
+        placeholder: "Email (Optional)",
+        class: "form-control"
+    %>
+    <%= f.text_field :license_no,
+        placeholder: "License No",
+        class: "form-control"
+    %>
+    <!-- Specializations -->
+    <div class="form-group">
+      <%= f.collection_select :specialization_id, 
+          specializations, 
+          :id, :name, { 
+            prompt: "Select Specialization"
+          }, { class: "form-control" }
+      %>
+    </div>
+  </div>
+<% end %>

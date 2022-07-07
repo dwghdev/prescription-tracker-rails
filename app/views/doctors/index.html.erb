@@ -1,0 +1,9 @@
+<%- path = doctors_path %>
+
+<%= render "layouts/header" %>
+<%= render "layouts/breadcrumb", path: path %>
+<%= render "layouts/searchbar", path: path, placeholder: "Find Doctor" %>
+
+<ul class="doctor-list">
+  <%= render "doctors" %>
+</ul>

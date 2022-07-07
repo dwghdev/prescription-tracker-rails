@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
   before_action :set_doctors, only: :home
 
-  def home
-  end
+  def home; end
 
   private
 

@@ -1,0 +1,8 @@
+<div class="specializations">
+  <% @specializations.each do |specialization| %>
+    <h3 class="title">
+      <%= link_to specialization.name, specialization_path(specialization) %>
+    </h3>
+    <p class="mb-5"><%= specialization.description %></p>
+  <% end %>
+</div>

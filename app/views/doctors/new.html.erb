@@ -1,0 +1,26 @@
+<% render "layouts/header" %>
+
+<div class="breadcrumb">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item">
+          <%= link_to "Home", root_path %>
+        </li>
+        <li class="breadcrumb-item" aria-current="page">
+          <%= link_to "Doctors", doctors_path %>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <%= link_to params[:action], new_doctor_path %>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<div class="container register">
+  <h3 class="register-heading">
+    Register your doctor
+  </h3>
+  <%= render "form", button_label: "Register", specializations: @specializations %>
+</div>

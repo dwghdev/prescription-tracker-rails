@@ -1,0 +1,10 @@
+<% @doctors.each do |doctor| %>
+  <li class="doctor-item box">
+    <h2><%= getDoctorName(doctor) %></h2>
+    <p><%= doctor.phone_no %></p>
+    <p><%= get_specialization(doctor[:id]) %></p>
+    <%= link_to "more info", doctor_path(doctor), class: "btn btn-info" %>
+    <br/>
+    <%= link_to "prescriptions", doctor_prescriptions_path(doctor), class: "btn btn-info" %>
+  </li>
+<% end %>
