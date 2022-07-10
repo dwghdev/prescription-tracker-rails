@@ -2,7 +2,6 @@ class SpecializationsController < ApplicationController
   before_action :set_specializations, only: :index
 
   def index; end
-  def show; end
 
   private
   def set_specializations

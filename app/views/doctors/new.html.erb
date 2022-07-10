@@ -3,9 +3,7 @@
 <%= render "layouts/header" %>
 <%= render "layouts/breadcrumb", paths: paths %>
 
-<div class="container register">
-  <h3 class="register-heading">
-    Register your doctor
-  </h3>
+<div class="container mt-5">
+  <h3 class="register-heading mb-4">Register your doctor</h3>
   <%= render "form", button_label: "Register", specializations: @specializations %>
 </div>
