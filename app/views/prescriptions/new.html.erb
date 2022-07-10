@@ -1,0 +1,14 @@
+<%- paths = [
+  doctor_path(@doctor), 
+  doctor_prescriptions_path(@doctor),
+  new_doctor_prescription_path(@doctor)
+] %>
+
+<%= render "layouts/header" %>
+<%= render "layouts/breadcrumb", paths: paths %>
+
+<div class="box mt-5">
+  <h3 class="title text-center">
+    <%= @doctor.fullname %>'s new prescription
+  </h3>
+</div>

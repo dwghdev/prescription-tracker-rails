@@ -1,8 +1,11 @@
 <div class="specializations">
-  <% @specializations.each do |specialization| %>
-    <h3 class="title">
-      <%= link_to specialization.name, specialization_path(specialization) %>
-    </h3>
-    <p class="mb-5"><%= specialization.description %></p>
+  <% @specializations.each_with_index do |specialization, index| %>
+    <a class="title" data-bs-toggle="modal" href=<%= "#specializationModal#{index}" %> role="button">
+      <%= specialization.name %>
+    </a>
+    <p class="mb-5">
+      <%= specialization.description %>
+    </p>
+    <%= render "show_modal", specialization: specialization, index: index %>
   <% end %>
 </div>

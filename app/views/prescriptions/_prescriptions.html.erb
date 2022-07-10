@@ -1,0 +1,6 @@
+<% @prescriptions.each do |prescription| %>
+  <p>
+    <%= "Date: #{prescriptions.date}" %>
+  </p>
+  <%= link_to "Details", doctor_prescription_path(@doctor, prescription) %>
+<% end %>

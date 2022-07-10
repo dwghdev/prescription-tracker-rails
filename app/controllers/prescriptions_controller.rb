@@ -17,8 +17,8 @@ class PrescriptionsController < ApplicationController
   end
 
   def new
-    @prescription = Prescriptions.new
-    @prescription.prescription_medicines.build
+    @prescription = Prescription.new
+    @prescription.build_prescription_medicine
   end
 
   def create
