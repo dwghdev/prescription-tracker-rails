@@ -1,0 +1,6 @@
+<%- paths = [medicines_path] %>
+<%= render "layouts/header" %>
+<%= render "layouts/breadcrumb", paths: paths %>
+<%= render "layouts/searchbar", paths: paths, placeholder: "Search medicine" %>
+
+<%= render "medicines" %>
