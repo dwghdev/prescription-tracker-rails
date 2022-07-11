@@ -1,18 +1,25 @@
 <% @doctors.each do |doctor| %>
-  <li class="doctor-item box">
-    <h2><%= doctor.fullname %></h2>
-    <p><%= doctor.phone_no %></p>
-    <p><%= doctor.specialization.name %></p>
-    <%= 
-      link_to "more info", 
-      doctor_path(doctor), 
-      class: "btn btn-info" 
-    %>
-    <br/>
-    <%= 
-      link_to "prescriptions", 
-      doctor_prescriptions_path(doctor), 
-      class: "btn btn-info" 
-    %>
-  </li>
+  <tr>
+    <th scope="row">
+      <%= doctor.id %>
+    </th>
+    <th>
+      <%= link_to doctor.fullname, doctor_path(doctor) %>
+    </th>
+    <td>
+      <%= doctor.age %>
+    </td>
+    <td>
+      <%= doctor.phone_no %>
+    </td>
+    <td>
+      <%= doctor.email %>
+    </td>
+    <td>
+      <%= doctor.license_no %>
+    </td>
+    <td>
+      <%= doctor.specialization.name %>
+    </td>
+  </tr>
 <% end %>

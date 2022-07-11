@@ -1,3 +1,8 @@
-<% @medicines.each do |medicine| %>
-  <p><%= medicine.name %></p>
-<% end %>
+<div class="mt-4">
+  <% @medicines.each do |medicine| %>
+    <%= link_to medicine.name, medicine, class: "title" %>
+    <p class="mb-5">
+      <%= medicine.description %>
+    </p>
+  <% end %>
+</div>
